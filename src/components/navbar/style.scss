@@ -1,0 +1,58 @@
+.navbar {
+  background-color: var( --yellow-theme-nav-background-color);
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  align-items: center;
+  height: 80px;
+  font-size: 1.2rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    padding: 0px 20px;
+
+    &__logo {
+      color: var(--yellow-theme-main-color);
+      cursor: pointer;
+    }
+
+    &__menu {
+      display: flex;
+      list-style: none;
+      text-align: center;
+      gap: 10px;
+
+      &__item {
+        line-height: 40px;
+        margin-right: 1.5rem;
+        font-size: 1.6rem;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: transparent;
+          transition: all 0.5s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+          background: var(--yellow-theme-main-color);
+        }
+        &__links {
+            color: var(--yellow-theme-main-color);
+            text-decoration: none;
+            padding: 0,5rem;
+        }
+      }
+    }
+  }
+}
+
+.nav-icon {
+  display: none;
+}
