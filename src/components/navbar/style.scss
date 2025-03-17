@@ -13,6 +13,7 @@
     width: 100%;
     height: inherit;
     padding: 0px 20px;
+    flex:1;
 
     &__logo {
       color: var(--yellow-theme-main-color);
@@ -23,7 +24,7 @@
       display: flex;
       list-style: none;
       text-align: center;
-      gap: 10px;
+   
 
       &__item {
         line-height: 40px;
@@ -34,7 +35,7 @@
           content: '';
           display: block;
           width: 0;
-          height: 2px;
+          height: 3px;
           background: transparent;
           transition: all 0.5s ease;
         }
@@ -46,13 +47,52 @@
         &__links {
             color: var(--yellow-theme-main-color);
             text-decoration: none;
-            padding: 0,5rem;
+            padding: 0.5rem;
         }
       }
     }
   }
 }
-
 .nav-icon {
-  display: none;
+    display: none;
+
+  }
+
+
+@media only screen and (max-width:768px){
+    .navbar__container__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        
+       position: absolute;
+       top: 80px;
+       left: -110%;opacity: 1;
+       transition: all 0.5s ease;
+       &.active{
+        background: #181818;
+        left: 0px;
+        opacity: 1;
+
+        &.active{
+            background: #181818;
+            left:0px;
+            opacity: 1;
+        }
+
+        &__item{
+            border-bottom: 1px solid #282828;
+            padding: 20px 0px;
+
+        }
+       }
+    }
+
+    .nav-icon {
+        display: block;
+        cursor: pointer;
+        color: var(--yellow-theme-main-color);
+        padding-right: 20px;
+      }
 }
