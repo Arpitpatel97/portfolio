@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import Home from './containers/home';
 import About from './containers/about';
@@ -21,7 +21,9 @@ function App() {
     <div className="App">
       
       <Navbar />
-      <Particle id="particles" options={Particles} init={handleInit} />
+      {/* <Particle id="particles" options={Particles} init={handleInit} /> */}
+      {/* main page content */}
+      <div className='App__main-page-content'>
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -31,6 +33,8 @@ function App() {
         <Route path="/skills" element={<Skills />} />
       </Routes>
      
+      </div>
+      
     </div>
   );
 }
